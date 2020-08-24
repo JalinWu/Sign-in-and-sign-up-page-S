@@ -1,6 +1,6 @@
 # Sign in and Sign up page
 
-It is a teaching material.
+It's a teaching material for 'student' to practice Sign in and Sign up process, which is based on Node.js and SQLite. Have fun and enjoy it.
 
 ### Usage
 
@@ -15,7 +15,3 @@ $ npm run dev
 
 # Visit http://localhost:5000
 ```
-
-### MongoDB
-
-Open "config/keys.js" and add your MongoDB URI, local or Atlas

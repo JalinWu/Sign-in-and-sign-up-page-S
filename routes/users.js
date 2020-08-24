@@ -9,13 +9,26 @@ const { forwardAuthenticated } = require('../config/auth');
 
 // Register
 router.post('/register', (req, res) => {
-  const { name, email, password, password2 } = req.body;
-  let errors = [];
+  var { name, email, password, password2 } = req.body;
+  var errors = [];
+
+  // 新增判斷：'欄位不可為空'
 
 
 
+  // 新增判斷：'請勿輸入特殊字元'
 
 
+
+  // 新增判斷：'密碼長度要大於 6'
+
+
+
+  // 新增判斷：'密碼不相同'
+
+
+
+  // 如果有 error，回到 register 頁面
   if (errors.length > 0) {
     res.render('register', {
       errors,
@@ -26,21 +39,26 @@ router.post('/register', (req, res) => {
     });
   } else {
     db.serialize(() => {
-
-      if (row.length > 0) {
-        errors.push({ msg: 'Email already exists' });
-        res.render('register', {
-          errors,
-          name,
-          email,
-          password,
-          password2
-        });
-      } else {
-
-      }
+      // 創建 TABLE
 
 
+
+      // 定義 query：查詢 email 是否存在
+      
+
+      
+      // 執行 query
+
+
+
+        // 新增判斷：如果 email 存在，回到 register 頁面       
+
+
+
+        // 新增判斷：否則將密碼進行 bcrypt 加密後，新增進資料庫
+
+
+        
     })
 
   }
@@ -67,5 +85,6 @@ router.get('/login', forwardAuthenticated, (req, res) => res.render('login'));
 
 // Register Page
 router.get('/register', forwardAuthenticated, (req, res) => res.render('register'));
+
 
 module.exports = router;
