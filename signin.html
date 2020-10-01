@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign In</title>
+        <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <!-- Bootstrap CSS --> 
+ 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+            
+ <!-- jQuery first, then Tether, then Bootstrap JS. -->  
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <style>
+        .container-fluid {
+      padding:1% 5% 7% 5%;
+      text-align:center;
+  }label{
+      margin-top:0px;
+      margin-bottom:0px;
+      
+  }.form-group{
+      margin-top:0px;
+      margin-bottom:10px;
+  }
+    </style>
+    </head>
+    <body>
+  
+<div id="lslider" class="carousel slide" data-ride="carousel"> 
+ <ol class="carousel-indicators">
+     <li data-target="#lslider" data-slide-to="0" class="active" style="color:red;"></li>
+      <li data-target="#lslider" data-slide-to="1" class="active fa fa-circle"></li>
+ </ol>
+<div class="carousel-inner">
+ <div class="carousel-item active container-fluid">
+    <i class="fa fa-home fa-5x" style="font-size:100px;"></i>
+  <div style="margin-top:10px;">Store all your data one place</div> 
+   </div> 
+   
+   <div class="carousel-item container-fluid">
+    <i class="fa fa-handshake-o
+
+ fa-5x" style="font-size:100px;"></i>
+  <div style="margin-top:10px;">Close your all deals faster</div> 
+   </div> 
+</div> 
+      <a class="carousel-control-prev" href="#lslider" role="button" data-slide="prev">
+       <span class="fa fa-chevron-left" aria-hidden="true" style="color:black;">
+   <span class="sr-only">Previous</span> </a>
+   <a class="carousel-control-next" href="#lslider" role="button" data-slide="next"> 
+<span class="fa fa-chevron-right" aria-hidden="true" style="color:black;">
+     </span> 
+ <span class="sr-only">Next</span> 
+ </a>
+  </div>
+  
+  
+  <div style="margin-left:5%;margin-right:5%;">
+<form action="/signup" method="post"> 
+
+ 
+      
+      
+ <div class="form-group"> 
+   <label for="signupName">Name</label>
+   <input type="text" name="name" 
+    value="" 
+    class="form-control" id="signupName" aria-describedby="nameHelp" placeholder="Enter Name" required/>
+    <small id="nameHelp" class="form-text text-muted">We'll never share your details with anyone else.</small> 
+ </div>
+ 
+ <div class="form-group"> 
+   <label for="exampleInputEmail1">Email address</label>
+   <input type="email" 
+   value=""
+   name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required/>
+ </div>
+ <div class="form-group">
+    
+    <label for="inlineFormInputGroupUsername">Phone Number</label>
+     <div class="input-group">
+       <div class="input-group-prepend"> 
+       <div class="input-group-text">+91</div> 
+       </div>
+     <input type="number" 
+     value=""
+     name="phone" class="form-control" id="inlineFormInputGroupUsername" placeholder="Phone Number">      
+    
+    </div>
+ </div>
+ 
+ <div class="form-group"> 
+ 
+ 
+   <label for="exampleInputPassword1">Password</label> 
+   <input type="password" 
+   value=""
+   class="form-control" name="password" id="exampleInputPassword1" placeholder="Password" required/>
+ </div>
+ <button type="submit" class="btn btn-primary" style="width:100%; ">Submit</button>
+</form>
+<div style="text-align:center;margin-top:10px;">
+already have an account?
+  <a href="/login">
+   <span class="color-primary">login</span>
+  </a>
+  </div>
+   </div>
+   
+<script>
+    $(function(){
+        $('.carousel').carousel({
+            interval:2000
+        })
+    })
+</script>
+
+    </body>
+</html>
